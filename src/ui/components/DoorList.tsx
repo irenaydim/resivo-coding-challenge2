@@ -2,7 +2,9 @@ import { useRouter } from 'next/router';
 import { useCallback } from 'react';
 import { Door } from '@/models/Door';
 import { DataGrid, GridColDef, GridRowParams } from '@mui/x-data-grid';
+import Typography from '@mui/material/Typography';
 import ConnectionStatus from './ConnectionStatus';
+import { getLocaleString } from '@/lib/dateTime';
 
 interface DoorListProps {
   doors: Door[];
@@ -33,8 +35,16 @@ const columns: GridColDef<Door>[] = [
     field: 'connectionStatus',
     headerName: 'Connection status',
     flex: 1,
-    renderCell: ({ row: {connectionStatus} }) => {
+    renderCell: ({ row: { connectionStatus } }) => {
       return <ConnectionStatus status={connectionStatus} />;
+    },
+  },
+  {
+    field: 'lastConnectionStatusUpdate',
+    headerName: 'Last connection status update',
+    flex: 1,
+    renderCell: ({ row: { lastConnectionStatusUpdate } }) => {
+      return <Typography>{getLocaleString(lastConnectionStatusUpdate)}</Typography>;
     },
   },
 ];

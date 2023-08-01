@@ -1,5 +1,5 @@
 import { ConnectionStatus as ConnStatus } from "@/models/ConnectionStatus"
-import { Typography } from "@mui/material"
+import Typography from '@mui/material/Typography';
 
 interface ConnectionStatusProps {
   status: ConnStatus;
