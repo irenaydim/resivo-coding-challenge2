@@ -15,6 +15,11 @@ const columns: GridColDef<Door>[] = [
     flex: 1,
   },
   {
+    field: 'apartmentName',
+    headerName: 'Apartment name',
+    flex: 1,
+  },
+  {
     field: 'buildingName',
     headerName: 'Building',
     flex: 1,

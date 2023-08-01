@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest --watch",
+    "test-snap-up": "jest --updateSnapshot",
     "test:ci": "jest --ci",
     "format:write": "prettier --write --ignore-unknown .",
     "format:check": "prettier --check ."

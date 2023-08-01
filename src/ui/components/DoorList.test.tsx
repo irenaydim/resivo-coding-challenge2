@@ -8,9 +8,11 @@ const doors: Door[] = [
   {
     id: '63f637c9f3c48a124616044b',
     name: 'Building Main Entrance',
+    apartmentName: 'n/a',
     buildingName: 'Bahnhofstrasse 10A',
     connectionType: 'wired',
     connectionStatus: 'offline',
+    lastConnectionStatusUpdate: '',
   },
 ];
 

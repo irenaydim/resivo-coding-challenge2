@@ -13,6 +13,9 @@ export function DoorDetail({ door }: DoorDetailProps) {
       <DetailPageItem label="ID">
         <Typography>{door.id}</Typography>
       </DetailPageItem>
+      <DetailPageItem label="Apartment name">
+        <Typography>{door.apartmentName}</Typography>
+      </DetailPageItem>
       <DetailPageItem label="Building">
         <Typography>{door.buildingName}</Typography>
       </DetailPageItem>
