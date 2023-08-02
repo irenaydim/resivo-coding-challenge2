@@ -4,6 +4,7 @@ import { DetailPageContainer } from '@/ui/layout/DetailPageContainer';
 import { DetailPageItem } from '@/ui/layout/DetailPageItem';
 import ConnectionStatus from './ConnectionStatus';
 import { getLocaleString } from '@/lib/dateTime';
+import ConnectionType from './ConnectionType';
 
 interface DoorDetailProps {
   door: Door;
@@ -22,7 +23,7 @@ export function DoorDetail({ door }: DoorDetailProps) {
         <Typography>{door.buildingName}</Typography>
       </DetailPageItem>
       <DetailPageItem label="Connection type">
-        <Typography>{door.connectionType}</Typography>
+        <ConnectionType type={door.connectionType} />
       </DetailPageItem>
       <DetailPageItem label="Connection status">
         <ConnectionStatus status={door.connectionStatus} />

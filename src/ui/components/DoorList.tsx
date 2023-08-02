@@ -5,6 +5,7 @@ import { DataGrid, GridColDef, GridRowParams } from '@mui/x-data-grid';
 import Typography from '@mui/material/Typography';
 import ConnectionStatus from './ConnectionStatus';
 import { getLocaleString } from '@/lib/dateTime';
+import ConnectionType from './ConnectionType';
 
 interface DoorListProps {
   doors: Door[];
@@ -30,6 +31,9 @@ const columns: GridColDef<Door>[] = [
     field: 'connectionType',
     headerName: 'Connection type',
     flex: 1,
+    renderCell: ({ row: { connectionType } }) => {
+      return <ConnectionType type={connectionType} />
+    }
   },
   {
     field: 'connectionStatus',

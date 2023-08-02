@@ -9,11 +9,15 @@ import { GetDoorByIdUseCase } from '@/server/useCases/GetDoorByIdUseCase';
 const getDoorByIdUseCase = container.resolve(GetDoorByIdUseCase);
 
 export default new ApiHandler()
-  .get(async (request: NextApiRequest, response: NextApiResponse<Door>) => {
-    const doorId = request.query.doorId;
-    assertApiQueryParamIsString(doorId);
+  .get(async (request: NextApiRequest, response: NextApiResponse<Door | Error>) => {
+    try {
+      const doorId = request.query.doorId;
+      assertApiQueryParamIsString(doorId);
 
-    const data = await getDoorByIdUseCase.execute({ doorId });
-    response.status(200).json(data);
+      const data = await getDoorByIdUseCase.execute({ doorId });
+      response.status(200).json(data);
+    } catch (err) {
+      response.status(400).json(err as Error);
+    }
   })
   .getHandler();

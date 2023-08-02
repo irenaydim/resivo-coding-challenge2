@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error text should render "Custom error ..." 1`] = `
+<div
+  class="css-1n7fu9l-MuiStack-root"
+>
+  <svg
+    aria-hidden="true"
+    class="MuiSvgIcon-root MuiSvgIcon-colorError MuiSvgIcon-fontSizeMedium css-1wxstni-MuiSvgIcon-root"
+    data-testid="ErrorRoundedIcon"
+    focusable="false"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 11c-.55 0-1-.45-1-1V8c0-.55.45-1 1-1s1 .45 1 1v4c0 .55-.45 1-1 1zm1 4h-2v-2h2v2z"
+    />
+  </svg>
+  <p
+    class="MuiTypography-root MuiTypography-body1 css-1nkhxq8-MuiTypography-root"
+  >
+    Custom error ...
+  </p>
+</div>
+`;
+
+exports[`Error text should render "Something went wrong ..." 1`] = `
+<div
+  class="css-1n7fu9l-MuiStack-root"
+>
+  <svg
+    aria-hidden="true"
+    class="MuiSvgIcon-root MuiSvgIcon-colorError MuiSvgIcon-fontSizeMedium css-1wxstni-MuiSvgIcon-root"
+    data-testid="ErrorRoundedIcon"
+    focusable="false"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 11c-.55 0-1-.45-1-1V8c0-.55.45-1 1-1s1 .45 1 1v4c0 .55-.45 1-1 1zm1 4h-2v-2h2v2z"
+    />
+  </svg>
+  <p
+    class="MuiTypography-root MuiTypography-body1 css-1nkhxq8-MuiTypography-root"
+  >
+    Something went wrong ...
+  </p>
+</div>
+`;

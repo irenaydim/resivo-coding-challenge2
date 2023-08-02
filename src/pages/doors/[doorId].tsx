@@ -10,7 +10,7 @@ export default function DoorDetailPage() {
 
   const { doorId } = router.query;
 
-  const { data: door, isSuccess } = useGetDoorByIdQuery(doorId as string, {
+  const { data: door, isSuccess, isFetching, isLoading, isError, error } = useGetDoorByIdQuery(doorId as string, {
     skip: !isPageQueryParamString(doorId),
   });
 
@@ -20,7 +20,7 @@ export default function DoorDetailPage() {
         <title>Door detail: {door?.name}</title>
         <meta name="description" content={`door ${door?.name} detail`} />
       </Head>
-      <Layout title={door?.name}>
+      <Layout title={door?.name} isSuccess={isSuccess} isFetching={isFetching} isLoading={isLoading} isError={isError} error={error}>
         {isSuccess && <DoorDetail door={door} />}
       </Layout>
     </>
